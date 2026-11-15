@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#3e4a3d",
+        "error-container": "#ffdad6",
+        "tertiary-container": "#007cb1",
+        "surface-tint": "#006e2d",
+        "on-tertiary-container": "#fcfcff",
+        "error": "#ba1a1a",
+        "on-background": "#131b2e",
+        "primary": "#006b2c",
+        "surface-container": "#eaedff",
+        "on-primary-fixed": "#002109",
+        "inverse-on-surface": "#eef0ff",
+        "on-secondary-fixed": "#00201d",
+        "surface-variant": "#dae2fd",
+        "surface": "#faf8ff",
+        "secondary-container": "#86f2e4",
+        "background": "#faf8ff",
+        "primary-fixed-dim": "#62df7d",
+        "secondary": "#006a61",
+        "secondary-fixed": "#89f5e7",
+        "on-surface": "#131b2e",
+        "tertiary-fixed": "#c9e6ff",
+        "on-secondary-container": "#006f66",
+        "tertiary-fixed-dim": "#89ceff",
+        "surface-container-highest": "#dae2fd",
+        "on-error-container": "#93000a",
+        "surface-container-lowest": "#ffffff",
+        "primary-container": "#00873a",
+        "outline": "#6e7b6c",
+        "inverse-surface": "#283044",
+        "on-primary-fixed-variant": "#005320",
+        "surface-container-low": "#f2f3ff",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed-variant": "#004c6e",
+        "on-tertiary-fixed": "#001e2f",
+        "inverse-primary": "#62df7d",
+        "on-tertiary": "#ffffff",
+        "surface-container-high": "#e2e7ff",
+        "surface-dim": "#d2d9f4",
+        "primary-fixed": "#7ffc97",
+        "on-error": "#ffffff",
+        "on-primary-container": "#f7fff2",
+        "secondary-fixed-dim": "#6bd8cb",
+        "on-secondary-fixed-variant": "#005049",
+        "outline-variant": "#bdcaba",
+        "on-secondary": "#ffffff",
+        "tertiary": "#00628d",
+        "surface-bright": "#faf8ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "gutter": "1.5rem",
+        "margin-mobile": "1.25rem",
+        "space-xl": "2.5rem",
+        "space-lg": "1.5rem",
+        "margin": "2.5rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": ["Space Grotesk"],
+        "metric-numeral": ["Space Grotesk"],
+        "headline-lg": ["Space Grotesk"],
+        "display-hero": ["Space Grotesk"],
+        "label-lg": ["Space Mono"],
+        "body-sm": ["Hanken Grotesk"],
+        "display-hero-mobile": ["Space Grotesk"],
+        "body-lg": ["Hanken Grotesk"],
+        "label-sm": ["Space Mono"],
+        "headline-sm": ["Space Grotesk"],
+        "body-md": ["Hanken Grotesk"],
+        "headline-md": ["Space Grotesk"],
+        "label-md": ["Space Mono"],
+        "label-telemetry": ["Space Mono"],
+        "label-data": ["Space Mono"]
+      },
+      "fontSize": {
+        "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "metric-numeral": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+        "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+        "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+        "label-telemetry": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+        "label-data": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "700" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-high shadow-[0_1px_6px_rgba(19,27,46,0.06)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="FitSphere AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC__LWOkC0S_2LIlzEmKedNaHbzbBpjgImeaUi2Xqoy8cU6g9F8Zebg9c4A-Sazqdpd3CrsbQU7s6FCq931kRn5fsNOlS9xFod_YKH19qTyOyeuO71Rwu-Gx9tgzteOxwZVcfrs9RtZ7c4Mgif-TJ7CH1q4EOIkN9cTwMmx24ROxaS336acgoUzHXM38Rm1jZ1ZNOIORqHW8T22nuiZOjJje9e6A7ppcENX8zX_GMo1Zw"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-tight truncate">FitSphere AI</span><span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant truncate">Sports Workspace</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-telemetry text-label-telemetry tracking-wide border border-outline-variant/50"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shadow-[0_0_6px_rgba(0,107,44,0.6)]"></span><span>LOCAL MODE</span></div><button aria-label="Athlete Profile" class="w-11 h-11 rounded-full flex items-center justify-center p-0.5 hover:ring-2 hover:ring-primary/40 transition-all focus:outline-none"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGDvrlPKixVRKfc-OrbPRh9S15yn9j6wuOSKDh1vHnPPzEnyniaKZ16I40XiMqXg-qbvmSocT2pTGRhu_QmOYGNw9nlZHlzkmUnwNI2TGrqEcTegts1ZWwkC6kJ1JPS-eJoUN6ZwyWqhG_rrO_jn43egvzMDfGKfZTb-vhrz_xgRcYjsoYNoPUR9_WyhLomzoff6tDcdk0kYNC5ZOYtl5i0QibQhTMQM8vEhm56vei"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background"><div class="flex flex-col w-full pb-8">
+<!-- Horizontal Sport Selector Pill Bar -->
+<section class="w-full px-margin-mobile pt-space-sm pb-space-xs overflow-x-auto no-scrollbar">
+<div class="inline-flex items-center gap-space-xs py-1" id="sport-selector-track">
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-telemetry text-label-telemetry shadow-sm ring-1 ring-primary/20 transition-all flex-shrink-0" data-sport="cricket" type="button">
+<span class="text-sm">🏏</span>
+<span class="tracking-wider uppercase font-semibold">Cricket</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="football" type="button">
+<span class="text-sm">⚽</span>
+<span class="tracking-wider uppercase">Football</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="kabaddi" type="button">
+<span class="text-sm">🤼</span>
+<span class="tracking-wider uppercase">Kabaddi</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="basketball" type="button">
+<span class="text-sm">🏀</span>
+<span class="tracking-wider uppercase">Basketball</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="tennis" type="button">
+<span class="text-sm">🎾</span>
+<span class="tracking-wider uppercase">Tennis</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="badminton" type="button">
+<span class="text-sm">🏸</span>
+<span class="tracking-wider uppercase">Badminton</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="hockey" type="button">
+<span class="text-sm">🏑</span>
+<span class="tracking-wider uppercase">Field Hockey</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="volleyball" type="button">
+<span class="text-sm">🏐</span>
+<span class="tracking-wider uppercase">Volleyball</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="table-tennis" type="button">
+<span class="text-sm">🏓</span>
+<span class="tracking-wider uppercase">Table Tennis</span>
+</button>
+<button class="sport-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container border border-outline-variant/70 font-label-telemetry text-label-telemetry transition-all flex-shrink-0 shadow-xs" data-sport="baseball" type="button">
+<span class="text-sm">⚾</span>
+<span class="tracking-wider uppercase">Baseball</span>
+</button>
+</div>
+</section>
+<!-- Active Sport Telemetry Header Card -->
+<section class="px-margin-mobile pt-space-sm pb-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_10px_rgba(19,27,46,0.04)] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-telemetry text-label-telemetry uppercase text-primary tracking-widest font-semibold" id="telemetry-badge">CRICKET OPS ACTIVE</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full border border-outline-variant/40">SERIES 2025 · IN-MATCH</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold" id="sport-active-title">Cricket Performance &amp; Scouting</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry, biomechanics ball-tracking &amp; scout metrics</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic KPI Grid -->
+<section class="px-margin-mobile pt-space-xs">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface-variant font-semibold">Discipline Telemetry KPIs</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary font-semibold">OPTICAL TRACKING v4.2</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm" id="metrics-grid">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_8px_rgba(19,27,46,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-telemetry text-label-telemetry uppercase metric-label-1 font-semibold text-on-surface-variant">Batting Strike Rate</span>
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+</div>
+<div class="py-2">
+<span class="font-metric-numeral text-metric-numeral text-on-surface metric-val-1 font-bold">142.8</span>
+<span class="font-label-telemetry text-label-telemetry text-primary block pt-0.5 metric-sub-1 font-semibold">↑ +14.2% vs T20 avg</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500 metric-bar-1" style="width: 78%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_8px_rgba(19,27,46,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-telemetry text-label-telemetry uppercase metric-label-2 font-semibold text-on-surface-variant">Bowling Economy</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">show_chart</span>
+</div>
+<div class="py-2">
+<div class="flex items-baseline gap-1">
+<span class="font-metric-numeral text-metric-numeral text-on-surface metric-val-2 font-bold">6.42</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant font-semibold">RPO</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary block pt-0.5 metric-sub-2 font-semibold">Top 5% Death Overs</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500 metric-bar-2" style="width: 84%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_8px_rgba(19,27,46,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-telemetry text-label-telemetry uppercase metric-label-3 font-semibold text-on-surface-variant">Dot Ball %</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">adjust</span>
+</div>
+<div class="py-2">
+<span class="font-metric-numeral text-metric-numeral text-on-surface metric-val-3 font-bold">44.5%</span>
+<span class="font-label-telemetry text-label-telemetry text-tertiary block pt-0.5 metric-sub-3 font-semibold">54 Dots / 120 Deliveries</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all duration-500 metric-bar-3" style="width: 65%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_8px_rgba(19,27,46,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-telemetry text-label-telemetry uppercase metric-label-4 font-semibold text-on-surface-variant">Catch Conversion</span>
+<span class="material-symbols-outlined text-[18px] text-primary">sports_handball</span>
+</div>
+<div class="py-2">
+<span class="font-metric-numeral text-metric-numeral text-on-surface metric-val-4 font-bold">92%</span>
+<span class="font-label-telemetry text-label-telemetry text-primary block pt-0.5 metric-sub-4 font-semibold">23/25 Chances Taken</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500 metric-bar-4" style="width: 92%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Sport Switch Demo Banner -->
+<section class="px-margin-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_10px_rgba(19,27,46,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">swap_horiz</span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-secondary font-bold">Cross-Sport Schema Engine</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">TAP TO PREVIEW</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Experience how FitSphere AI transforms analytics models across entirely distinct sport physics:</p>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all text-left flex flex-col gap-1 border border-outline-variant/40" onclick="window.switchSportMetrics('football')" type="button">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-sm font-semibold text-on-surface">⚽ Football</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+</div>
+<span class="font-label-telemetry text-label-sm text-on-surface-variant">xG · Key Passes · Dribble % · Pressures</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all text-left flex flex-col gap-1 border border-outline-variant/40" onclick="window.switchSportMetrics('kabaddi')" type="button">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-sm font-semibold text-on-surface">🤼 Kabaddi</span>
+<span class="material-symbols-outlined text-[18px] text-primary">arrow_forward</span>
+</div>
+<span class="font-label-telemetry text-label-sm text-on-surface-variant">Raid Pts · Super Tackles · Bonus Pts · Cant Rate</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Athlete Scouting & Biometric Comparison Card -->
+<section class="px-margin-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_10px_rgba(19,27,46,0.04)] flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-primary font-bold">Scouting &amp; Head-to-Head</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Athlete Radar Comparison</h3>
+</div>
+<button aria-label="Export Scout Dossier" class="w-9 h-9 rounded-full bg-surface-container-low border border-outline-variant/50 flex items-center justify-center text-on-surface hover:text-primary transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<!-- Comparison Profiles Pill Group -->
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-xl bg-surface-container-low border border-outline-variant/40">
+<!-- Player A -->
+<div class="flex items-center gap-space-xs p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-xs">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up intense studio sports portrait of an Indian cricket all-rounder athlete wearing modern athletic training jersey with dark teal lighting and cyan rim glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzZXxNXLawlZbARdNgJ614BKNqVKNylm4NTlbk1ZhpTOLr5653RLseuql9EWmnrCJ001uH3h94JyplVSssGycT71XnD9zdqZDbPhHeRkYl_sjh6TheoU8g-Mae61JLP6FuRV0Yao7oOoqyLK3MtXvenuxGq6SarSRxTUq5nYeVHc3Rlwv7iqth7lCJ0IGnGLWD2VfKWuuiHw7DIjT1s5Vzs3SBE1et-hXMDutzf6KQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate leading-tight">Rohit K.</span>
+</div>
+<span class="font-label-telemetry text-[10px] text-on-surface-variant truncate">All-Rounder</span>
+</div>
+</div>
+<!-- Player B -->
+<div class="flex items-center gap-space-xs p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-xs">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Athletic high-contrast profile portrait of a fast bowler cricket player looking forward with stadium backlighting and warm amber accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOIpf8F9-WwfDeZbGGBIu7McIJFXBHl7xYmBJWbLGNkJtIsjF-n4laIsnIu_0F-cva5JPtEiWdm_aFD_yEItg_bB3eO39GybgN1HS_DJEY_9wf6PRSITazyUH-wuwst-NepUKhT0B9_U5Nuui10-B1aStIEQi_iRIzg6OTwNzkZo_eBlZEox-0pXqxP_ZMIS_UOPB5GiEeNrMro6dMR8EGMx1R8xmi8wR8Gsy9Y3Xz"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate leading-tight">David M.</span>
+</div>
+<span class="font-label-telemetry text-[10px] text-on-surface-variant truncate">Fast Bowler</span>
+</div>
+</div>
+</div>
+<!-- Radar Chart Visualizer (SVG) -->
+<div class="relative w-full aspect-square max-w-[280px] mx-auto flex items-center justify-center p-2 rounded-xl bg-surface-container-low/60 border border-outline-variant/30">
+<!-- Background Radar Rings & Spokes -->
+<svg class="w-full h-full overflow-visible" viewbox="0 0 240 240">
+<!-- Concentric Pentagons -->
+<polygon fill="none" opacity="0.6" points="120,20 215,89 179,200 61,200 25,89" stroke="#bdcaba" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<polygon fill="none" opacity="0.5" points="120,50 186,98 161,176 79,176 54,98" stroke="#bdcaba" stroke-dasharray="2 2" stroke-width="1"></polygon>
+<polygon fill="none" opacity="0.4" points="120,80 157,107 143,152 97,152 83,107" stroke="#bdcaba" stroke-dasharray="2 2" stroke-width="1"></polygon>
+<!-- Axes -->
+<line stroke="#dae2fd" stroke-width="1.2" x1="120" x2="120" y1="120" y2="20"></line>
+<line stroke="#dae2fd" stroke-width="1.2" x1="120" x2="215" y1="120" y2="89"></line>
+<line stroke="#dae2fd" stroke-width="1.2" x1="120" x2="179" y1="120" y2="200"></line>
+<line stroke="#dae2fd" stroke-width="1.2" x1="120" x2="61" y1="120" y2="200"></line>
+<line stroke="#dae2fd" stroke-width="1.2" x1="120" x2="25" y1="120" y2="89"></line>
+<!-- Player B Polygon (David M. - Cyan/Teal: Pace 96, Accuracy 85, Power 74, Stamina 80, Agility 68) -->
+<polygon class="transition-all duration-700" fill="rgba(0, 106, 97, 0.16)" points="120,28 198,92 165,182 74,184 48,102" stroke="#006a61" stroke-width="2.2"></polygon>
+<!-- Player A Polygon (Rohit K. - Vibrant Green: Pace 80, Accuracy 92, Power 94, Stamina 88, Agility 89) -->
+<polygon class="transition-all duration-700" fill="rgba(0, 107, 44, 0.22)" points="120,44 205,91 176,195 67,192 36,92" stroke="#006b2c" stroke-width="2.4"></polygon>
+<!-- Corner Indicator Dots Rohit -->
+<circle cx="120" cy="44" fill="#006b2c" r="3.5"></circle>
+<circle cx="205" cy="91" fill="#006b2c" r="3.5"></circle>
+<circle cx="176" cy="195" fill="#006b2c" r="3.5"></circle>
+<circle cx="67" cy="192" fill="#006b2c" r="3.5"></circle>
+<circle cx="36" cy="92" fill="#006b2c" r="3.5"></circle>
+<!-- Corner Indicator Dots David -->
+<circle cx="120" cy="28" fill="#006a61" r="3"></circle>
+<circle cx="198" cy="92" fill="#006a61" r="3"></circle>
+<circle cx="165" cy="182" fill="#006a61" r="3"></circle>
+<circle cx="74" cy="184" fill="#006a61" r="3"></circle>
+<circle cx="48" cy="102" fill="#006a61" r="3"></circle>
+</svg>
+<!-- Labels Placed Around Radar -->
+<span class="absolute top-1 text-center font-label-telemetry text-[11px] font-bold text-on-surface">PACE</span>
+<span class="absolute top-[35%] right-1 text-right font-label-telemetry text-[11px] font-bold text-on-surface">ACCURACY</span>
+<span class="absolute bottom-2 right-6 text-right font-label-telemetry text-[11px] font-bold text-on-surface">POWER</span>
+<span class="absolute bottom-2 left-6 text-left font-label-telemetry text-[11px] font-bold text-on-surface">STAMINA</span>
+<span class="absolute top-[35%] left-1 text-left font-label-telemetry text-[11px] font-bold text-on-surface">AGILITY</span>
+</div>
+<!-- Comparative Stat Metrics Summary -->
+<div class="grid grid-cols-5 gap-1 pt-1 text-center bg-surface-container-low p-2 rounded-lg border border-outline-variant/40">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-bold">PACE</span>
+<div class="flex justify-center items-baseline gap-1 mt-0.5">
+<span class="font-label-data text-[12px] text-primary font-bold">80</span>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<span class="font-label-data text-[12px] text-secondary font-bold">96</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-bold">ACCU</span>
+<div class="flex justify-center items-baseline gap-1 mt-0.5">
+<span class="font-label-data text-[12px] text-primary font-bold">92</span>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<span class="font-label-data text-[12px] text-secondary font-bold">85</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-bold">POWR</span>
+<div class="flex justify-center items-baseline gap-1 mt-0.5">
+<span class="font-label-data text-[12px] text-primary font-bold">94</span>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<span class="font-label-data text-[12px] text-secondary font-bold">74</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-bold">STAM</span>
+<div class="flex justify-center items-baseline gap-1 mt-0.5">
+<span class="font-label-data text-[12px] text-primary font-bold">88</span>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<span class="font-label-data text-[12px] text-secondary font-bold">80</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-bold">AGIL</span>
+<div class="flex justify-center items-baseline gap-1 mt-0.5">
+<span class="font-label-data text-[12px] text-primary font-bold">89</span>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<span class="font-label-data text-[12px] text-secondary font-bold">68</span>
+</div>
+</div>
+</div>
+<!-- Scout Intelligence & Coach Notes -->
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">psychology</span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-tertiary font-bold">AI Scout Intelligence Notes</span>
+</div>
+<span class="font-label-telemetry text-[10px] text-on-surface-variant font-semibold">CONFIDENCE 98.4%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+          “Strong death-over yorker execution. Needs footwork agility drills against leg-spin.”
+        </p>
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant bg-surface-container-lowest border border-outline-variant/40 px-2 py-0.5 rounded">Target: Release Angle +2.1°</span>
+<span class="font-label-telemetry text-[10px] text-on-surface-variant bg-surface-container-lowest border border-outline-variant/40 px-2 py-0.5 rounded">Risk: Slip fielding reaction</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Match Pose & Action Stream Card -->
+<section class="px-margin-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-[0_2px_10px_rgba(19,27,46,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">videocam</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Pose Vector Analytics</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full font-bold">REALTIME</span>
+</div>
+<!-- Match Visualizer Placeholder with Overlaid Vector Nodes -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-high border border-outline-variant/50">
+<img class="w-full h-full object-cover opacity-90" data-alt="Dynamic wide-angle sports action capture of a cricket bowler in delivery stride on turf under bright stadium floodlights at night with neon telemetry vector overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD50td8asTXSUnMCxf9C3540RM0Ax5UrivJcJDl9Tr4-6Jvmx0TGypBhMDmPrHFuuSnzP-Xddf7245Aknu_6gBtWUXTXlzlAyPgmnzBX6zUfYKhXjLEXvwrZiHlIU64sDpdAaDW0EVB0EqAdqTXcXgA905zp9UXic-9Xd5DeS3pYh7nRmGAy0dTqN79A_9EvZ3-OxWF-3-QV5DbRLZ0i9ZUerEZUBIzJ5a1_34M10Bb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<!-- Telemetry HUD Overlay -->
+<div class="absolute top-2 left-2 flex flex-col gap-0.5 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-outline-variant/50 shadow-xs">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant uppercase font-semibold">Release Velocity</span>
+<span class="font-label-data text-label-data text-primary font-bold">144.2 km/h</span>
+</div>
+<div class="absolute top-2 right-2 flex flex-col gap-0.5 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1.5 rounded-lg text-right border border-outline-variant/50 shadow-xs">
+<span class="font-label-telemetry text-[10px] text-on-surface-variant uppercase font-semibold">Seam Deviation</span>
+<span class="font-label-data text-label-data text-secondary font-bold">3.8° Late Inswing</span>
+</div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-outline-variant/50 shadow-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-telemetry text-[11px] text-on-surface font-semibold">Front Knee Extension Angle: 168° (Optimal)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const sportData = {
+      cricket: {
+        title: "Cricket Performance & Scouting",
+        telemetry: "CRICKET OPS ACTIVE",
+        kpis: [
+          { label: "Batting Strike Rate", val: "142.8", sub: "↑ +14.2% vs T20 avg", bar: "78%" },
+          { label: "Bowling Economy", val: "6.42", sub: "Top 5% Death Overs", bar: "84%" },
+          { label: "Dot Ball %", val: "44.5%", sub: "54 Dots / 120 Deliveries", bar: "65%" },
+          { label: "Catch Conversion", val: "92%", sub: "23/25 Chances Taken", bar: "92%" }
+        ]
+      },
+      football: {
+        title: "Football Performance & Scouting",
+        telemetry: "FOOTBALL OPS ACTIVE",
+        kpis: [
+          { label: "Expected Goals (xG)", val: "2.74", sub: "↑ +0.82 vs Opponent", bar: "82%" },
+          { label: "Key Passes / 90", val: "4.1", sub: "High Progressive Value", bar: "88%" },
+          { label: "Dribble Success %", val: "68.2%", sub: "15/22 Take-ons Won", bar: "68%" },
+          { label: "Defensive Pressures", val: "28", sub: "8 Regains in Final Third", bar: "74%" }
+        ]
+      },
+      kabaddi: {
+        title: "Kabaddi Performance & Scouting",
+        telemetry: "KABADDI OPS ACTIVE",
+        kpis: [
+          { label: "Total Raid Points", val: "16", sub: "62% Raid Success Rate", bar: "86%" },
+          { label: "Super Tackles", val: "3", sub: "Clutch Defense in Do-or-Die", bar: "90%" },
+          { label: "Bonus Points", val: "5", sub: "Active Toe Touch Execution", bar: "70%" },
+          { label: "Cant Rate Stability", val: "98%", sub: "Optimal Breath Regulation", bar: "98%" }
+        ]
+      },
+      basketball: {
+        title: "Basketball Performance & Scouting",
+        telemetry: "HOOPS OPS ACTIVE",
+        kpis: [
+          { label: "True Shooting %", val: "62.4%", sub: "Elite Perimeter Efficiency", bar: "84%" },
+          { label: "Usage Rate", val: "29.1%", sub: "Primary Ball-Handler", bar: "76%" },
+          { label: "Defensive Rating", val: "104.2", sub: "Top Decile Rim Protection", bar: "88%" },
+          { label: "Assist-to-TO Ratio", val: "3.4", sub: "11 Ast / 3 Turnovers", bar: "80%" }
+        ]
+      }
+    };
+
+    window.switchSportMetrics = function(sportKey) {
+      const data = sportData[sportKey];
+      if (!data) return;
+
+      const titleEl = document.getElementById("sport-active-title");
+      const badgeEl = document.getElementById("telemetry-badge");
+      if (titleEl) titleEl.textContent = data.title;
+      if (badgeEl) badgeEl.textContent = data.telemetry;
+
+      data.kpis.forEach((kpi, idx) => {
+        const i = idx + 1;
+        const lEl = document.querySelector(".metric-label-" + i);
+        const vEl = document.querySelector(".metric-val-" + i);
+        const sEl = document.querySelector(".metric-sub-" + i);
+        const bEl = document.querySelector(".metric-bar-" + i);
+
+        if (lEl) lEl.textContent = kpi.label;
+        if (vEl) vEl.textContent = kpi.val;
+        if (sEl) sEl.textContent = kpi.sub;
+        if (bEl) bEl.style.width = kpi.bar;
+      });
+
+      // Update pill classes
+      const pills = document.querySelectorAll(".sport-pill");
+      pills.forEach(p => {
+        if (p.getAttribute("data-sport") === sportKey) {
+          p.classList.remove("bg-surface-container-lowest", "text-on-surface-variant", "border", "border-outline-variant/70", "shadow-xs");
+          p.classList.add("bg-primary", "text-on-primary", "shadow-sm", "ring-1", "ring-primary/20");
+          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } else {
+          p.classList.remove("bg-primary", "text-on-primary", "shadow-sm", "ring-1", "ring-primary/20");
+          p.classList.add("bg-surface-container-lowest", "text-on-surface-variant", "border", "border-outline-variant/70", "shadow-xs");
+        }
+      });
+    };
+
+    // Attach click listeners to selector track
+    const track = document.getElementById("sport-selector-track");
+    if (track) {
+      track.addEventListener("click", function(e) {
+        const btn = e.target.closest(".sport-pill");
+        if (!btn) return;
+        const sport = btn.getAttribute("data-sport");
+        if (sportData[sport]) {
+          window.switchSportMetrics(sport);
+        } else {
+          // Fallback UI toast-like indicator
+          const titleEl = document.getElementById("sport-active-title");
+          const name = btn.querySelector("span:last-child").textContent;
+          if (titleEl) titleEl.textContent = name + " Performance & Scouting";
+          
+          document.querySelectorAll(".sport-pill").forEach(p => {
+            p.classList.remove("bg-primary", "text-on-primary", "shadow-sm", "ring-1", "ring-primary/20");
+            p.classList.add("bg-surface-container-lowest", "text-on-surface-variant", "border", "border-outline-variant/70", "shadow-xs");
+          });
+          btn.classList.remove("bg-surface-container-lowest", "text-on-surface-variant", "border", "border-outline-variant/70", "shadow-xs");
+          btn.classList.add("bg-primary", "text-on-primary", "shadow-sm", "ring-1", "ring-primary/20");
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container-high shadow-[0_-2px_12px_rgba(19,27,46,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home-overview" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">grid_view</span><span class="font-label-telemetry text-label-telemetry text-[10px] uppercase tracking-wider font-semibold">Home</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="fitness-workouts" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">fitness_center</span><span class="font-label-telemetry text-label-telemetry text-[10px] uppercase tracking-wider font-semibold">Fitness</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="ai-pose-counter" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">view_in_ar</span><span class="font-label-telemetry text-label-telemetry text-[10px] uppercase tracking-wider font-semibold">AI Pose</span></a><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-primary font-semibold" data-path="sports-workspace" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">sports_score</span><span class="font-label-telemetry text-label-telemetry text-[10px] uppercase tracking-wider font-bold">Sports</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="more-settings" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">tune</span><span class="font-label-telemetry text-label-telemetry text-[10px] uppercase tracking-wider font-semibold">More</span></a></div></nav></body></html>

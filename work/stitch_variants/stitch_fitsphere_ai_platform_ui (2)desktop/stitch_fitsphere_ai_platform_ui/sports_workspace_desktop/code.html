@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#ffba61", "inverse-on-surface": "#283044", "surface-bright": "#31394d", "secondary-fixed": "#acedff", "on-tertiary-fixed-variant": "#653e00", "on-error": "#690005", "primary-fixed-dim": "#4ae176", "outline": "#869585", "secondary": "#4cd7f6", "error-container": "#93000a", "surface-container-highest": "#2d3449", "on-secondary-container": "#00424e", "on-surface": "#dae2fd", "on-primary-container": "#004b1e", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#22c55e", "on-secondary-fixed-variant": "#004e5c", "primary": "#4be277", "on-surface-variant": "#bccbb9", "secondary-container": "#03b5d3", "on-primary": "#003915", "inverse-surface": "#dae2fd", "inverse-primary": "#006e2f", "surface-container-high": "#222a3d", "primary-fixed": "#6bff8f", "surface-container": "#171f33", "on-error-container": "#ffdad6", "surface-container-lowest": "#060e20", "surface-tint": "#4ae176", "tertiary-container": "#ef9900", "outline-variant": "#3d4a3d", "surface-container-low": "#131b2e", "on-tertiary-fixed": "#2a1700", "on-primary-fixed-variant": "#005321", "error": "#ffb4ab", "tertiary-fixed-dim": "#ffb95f", "on-secondary": "#003640", "surface": "#0b1326", "on-background": "#dae2fd", "surface-dim": "#0b1326", "background": "#0b1326", "on-primary-fixed": "#002109", "surface-variant": "#2d3449", "tertiary-fixed": "#ffddb8", "on-tertiary": "#472a00", "on-tertiary-container": "#5c3800", "on-secondary-fixed": "#001f26" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-mobile": "1rem", "margin": "1.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "space-md": "1rem", "margin-desktop": "3rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem" }, "fontFamily": { "headline-lg-mobile": [ "Space Grotesk" ], "display-hero-mobile": [ "Space Grotesk" ], "label-data": [ "JetBrains Mono" ], "label-telemetry": [ "JetBrains Mono" ], "body-md": [ "Manrope" ], "display-hero": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-lg": [ "Manrope" ], "body-sm": [ "Manrope" ], "headline-md": [ "Space Grotesk" ] }, "fontSize": { "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-data": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-telemetry": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md select-none"><div class="flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs px-space-xs"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_20px_rgba(34,197,94,0.15)]"><span class="material-symbols-outlined text-[24px]">bolt</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface">FitSphere AI</span><span class="font-label-telemetry text-label-telemetry text-secondary tracking-widest">KINETIC PLATFORM</span></div></div><div class="mt-space-xs"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-telemetry text-label-telemetry"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LOCAL-FIRST ENCLAVE</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-[0_0_16px_rgba(34,197,94,0.25)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="personal-fitness" href="#"><span class="material-symbols-outlined text-[20px]">fitness_center</span><span class="font-body-md text-body-md">Personal Fitness</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-[0_0_16px_rgba(34,197,94,0.25)]" data-path="sports-workspace" href="#"><span class="material-symbols-outlined text-[20px]">emoji_events</span><span class="font-body-md text-body-md">Sports Workspace</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-exercise-counter" href="#"><span class="material-symbols-outlined text-[20px]">center_focus_strong</span><span class="font-body-md text-body-md">AI Exercise Counter</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="marketplace" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-body-md text-body-md">Marketplace</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md">Reports</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#"><span class="material-symbols-outlined text-[20px]">database</span><span class="font-body-md text-body-md">Data Management</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="flex flex-col gap-space-sm pt-space-md"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container"><div class="flex items-center gap-space-sm"><div class="relative"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-on-surface text-[20px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-surface-container"></span></div><div class="flex flex-col min-w-0"><span class="font-headline-md text-sm text-on-surface truncate">Alex Rivera</span><span class="font-label-telemetry text-label-telemetry text-secondary truncate">PRO ATHLETE</span></div></div><button aria-label="Profile Options" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-error transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md">Logout</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="flex items-center gap-space-sm w-full bg-surface-container-low px-space-md py-space-xs rounded-xl focus-within:ring-2 focus-within:ring-secondary/40 transition-all"><span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span><input class="bg-transparent border-0 outline-none w-full text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm" placeholder="Search telemetry, workouts, datasets..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-telemetry text-label-telemetry shadow-[0_0_20px_rgba(6,182,212,0.15)]"><span class="material-symbols-outlined text-[14px] animate-spin">sync</span><span>ON-DEVICE WebGPU • 60 FPS</span></div><button aria-label="Notifications" class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><button aria-label="High Contrast Mode" class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">contrast</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface w-full px-gutter min-h-screen"><div class="flex flex-col w-full pb-margin-desktop">
+<!-- Top Workspace Context Header -->
+<header class="flex flex-col gap-space-sm pt-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-telemetry text-label-telemetry">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            SCOUT ENCLAVE V4.2
+          </span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant tracking-wider uppercase">
+            // OPTICAL POSITIONAL ARRAYS ACTIVE
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Multi-Sport Biomechanics &amp; Scouting Workspace
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Live telemetry, optical ball-tracking, athlete radar analytics, and scout comparison across 10 disciplines.
+        </p>
+</div>
+<!-- Action Suite -->
+<div class="flex items-center gap-space-sm">
+<button class="h-12 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface transition-colors flex items-center gap-space-xs font-label-data text-label-data">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_download</span>
+<span>Batch Video Ingest</span>
+</button>
+<button class="h-12 px-space-lg rounded-full bg-primary hover:bg-primary-fixed text-on-primary font-headline-md text-label-data flex items-center gap-space-xs shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span>Generate Scout Dossier</span>
+</button>
+</div>
+</div>
+<!-- 10-Sport Horizontal Discipline Switcher -->
+<div class="mt-space-md p-1.5 bg-surface-container-lowest rounded-2xl flex items-center gap-1 overflow-x-auto shadow-inner select-none">
+<!-- Sport: Cricket (Active) -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-headline-md text-label-data shadow-[0_0_16px_rgba(34,197,94,0.3)] transition-all shrink-0">
+<span class="material-symbols-outlined text-[20px]">sports_cricket</span>
+<span>Cricket</span>
+<span class="ml-1 w-2 h-2 rounded-full bg-on-primary-container"></span>
+</button>
+<!-- Sport: Football -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_soccer</span>
+<span>Football</span>
+</button>
+<!-- Sport: Basketball -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_basketball</span>
+<span>Basketball</span>
+</button>
+<!-- Sport: Kabaddi -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_kabaddi</span>
+<span>Kabaddi</span>
+</button>
+<!-- Sport: Tennis -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_tennis</span>
+<span>Tennis</span>
+</button>
+<!-- Sport: Badminton -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_handball</span>
+<span>Badminton</span>
+</button>
+<!-- Sport: Field Hockey -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_hockey</span>
+<span>Field Hockey</span>
+</button>
+<!-- Sport: Volleyball -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_volleyball</span>
+<span>Volleyball</span>
+</button>
+<!-- Sport: Table Tennis -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_tennis</span>
+<span>Table Tennis</span>
+</button>
+<!-- Sport: Baseball -->
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shrink-0 font-label-data text-label-data">
+<span class="material-symbols-outlined text-[20px]">sports_baseball</span>
+<span>Baseball</span>
+</button>
+</div>
+</header>
+<!-- Top Discipline KPI Banner (Cricket 4-Card Set) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter mb-gutter-lg">
+<!-- Card 1: Strike Rate -->
+<div class="bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">
+          BAT_STRIKE_RATE // CRICKET
+        </span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight font-bold">142.8</span>
+<span class="font-label-telemetry text-label-telemetry text-primary font-semibold">+14.2%</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full shadow-[0_0_12px_rgba(34,197,94,0.8)]" style="width: 78.4%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>T20 Tier Avg: 125.0</span>
+<span class="text-on-surface">Percentile: 94.2</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Bowling Economy -->
+<div class="bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">
+          BOWL_ECONOMY // DEATH OVERS
+        </span>
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight font-bold">6.42</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary font-semibold">RPO</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full shadow-[0_0_12px_rgba(6,182,212,0.8)]" style="width: 89%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>Top 5% Elite Bracket</span>
+<span class="text-secondary font-semibold">Overs 16-20</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Dot Ball Percentage -->
+<div class="bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-tertiary/5 rounded-full blur-2xl group-hover:bg-tertiary/10 transition-colors pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">
+          DOT_BALL_PRESSURE
+        </span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">stop_circle</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight font-bold">44.5%</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">54 / 120</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full shadow-[0_0_12px_rgba(255,186,97,0.8)]" style="width: 44.5%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>Phase 1 PP: 18 Dots</span>
+<span>Death: 22 Dots</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Catch Conversion -->
+<div class="bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">
+          CATCH_CONVERSION_RATE
+        </span>
+<span class="material-symbols-outlined text-primary text-[20px]">sports</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-hero text-headline-lg text-on-surface tracking-tight font-bold">92.0%</span>
+<span class="font-label-telemetry text-label-telemetry text-primary font-semibold">23/25</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full shadow-[0_0_12px_rgba(34,197,94,0.8)]" style="width: 92%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>Slip Zone: 100% (8/8)</span>
+<span>Deep Midwicket: 15/17</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main 2-Column Desktop Grid Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: Head-to-Head Athlete Scouting & Radar (Span 6) -->
+<div class="xl:col-span-6 flex flex-col gap-gutter">
+<!-- Athlete Comparison Shell & Profile Bar -->
+<section class="bg-surface-container rounded-2xl p-space-lg shadow-xl">
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b border-surface-container-highest/60">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">compare_arrows</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Athletic Scouting Comparison</h2>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">HEAD-TO-HEAD BIOMECHANICAL BENCHMARK</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-telemetry text-label-telemetry">
+            CORRELATION: 0.94 r
+          </span>
+</div>
+<!-- Profiles Dual Banner -->
+<div class="grid grid-cols-2 gap-space-md p-space-md rounded-xl bg-surface-container-low mb-space-lg">
+<!-- Athlete A -->
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-xl object-cover ring-2 ring-primary" data-alt="Athletic portrait of Rohit K., focused Indian male cricketer in dark high-performance athletic apparel with subtle green rim lighting, ultra sharp studio sports photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANoSwOifwCSJMSkz07sZPPdPSrE4EouMqoWwQSk-1TNqjakptgKNXexzpAQb_Z5jP8NydwW4ymi2uJ6zyWGI1T-8PRH5iVgucGvU7pyhFmLznN7IERoo8BVGsEhRrW4a8DvKBwnEwTJDY4S40buvJaI9qyAZg1j4x0XqpD7Ly4b4eeeN-la30B3Uub4L8XthF-JyRn97UN3IrIIAFsaDkhjM_du_KRRbrvhzYfS1Lo"/>
+<span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-sm text-on-surface truncate font-semibold">Rohit K.</span>
+<span class="font-label-telemetry text-label-telemetry text-primary truncate">PRIMARY ALL-ROUNDER</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">Right-Arm Medium / Top-Order</span>
+</div>
+</div>
+<!-- Athlete B -->
+<div class="flex items-center justify-end gap-space-sm text-right">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-sm text-on-surface truncate font-semibold">David M.</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary truncate">FAST-BOWLER SPECIALIST</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">Right-Arm Express / Tailender</span>
+</div>
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-xl object-cover ring-2 ring-secondary" data-alt="Athletic portrait of David M., Australian fast bowler with determined intense expression in technical training kit with subtle cyan ambient lighting, cinematic sports lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbZeMOlA3mTT3JSYqOSX-VcAMFBr-nfFjm_RhbyJQaV8UjBUuZmsQf3A7ZpjQWEQtiagxhSLjUvEP5f44KsnqI2gAZBe3MXqL5jYNWko2xsrEXqfLwQh9_x3EFfvyJ7zJ5SZHkim56EFE6-nTWNvVqo21Hjajhng0A3nQvLIY9JUtZArmbliTEj_LI1d3Vu0t9fb3pehF9nwqUCXJGvogMZIoGPL-Znx2NhWT9LPRT"/>
+<span class="absolute -top-1 -left-1 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container"></span>
+</div>
+</div>
+</div>
+<!-- Radar / Spider Chart (Inline Vector Graphics) -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-lowest rounded-xl relative">
+<!-- Radar Visual Container -->
+<div class="w-full max-w-md aspect-square relative flex items-center justify-center">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 400 400">
+<defs>
+<!-- Green Glow Filter -->
+<filter height="140%" id="glow-primary" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<!-- Cyan Glow Filter -->
+<filter height="140%" id="glow-secondary" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Concentric Pentagons (Grid) -->
+<!-- 100% -->
+<polygon fill="none" points="200,40 352,150 294,329 106,329 48,150" stroke="#2d3449" stroke-dasharray="2 3" stroke-width="1.5"></polygon>
+<!-- 80% -->
+<polygon fill="none" points="200,72 322,160 275,303 125,303 78,160" stroke="#2d3449" stroke-width="1.2"></polygon>
+<!-- 60% -->
+<polygon fill="none" points="200,104 291,170 256,277 144,277 109,170" stroke="#2d3449" stroke-width="1"></polygon>
+<!-- 40% -->
+<polygon fill="none" points="200,136 261,180 238,252 162,252 139,180" stroke="#2d3449" stroke-width="1"></polygon>
+<!-- 20% -->
+<polygon fill="none" points="200,168 230,190 219,226 181,226 170,190" stroke="#2d3449" stroke-width="1"></polygon>
+<!-- Axis Spoke Lines from Center (200, 200) -->
+<line stroke="#3d4a3d" stroke-width="1" x1="200" x2="200" y1="200" y2="40"></line>
+<line stroke="#3d4a3d" stroke-width="1" x1="200" x2="352" y1="200" y2="150"></line>
+<line stroke="#3d4a3d" stroke-width="1" x1="200" x2="294" y1="200" y2="329"></line>
+<line stroke="#3d4a3d" stroke-width="1" x1="200" x2="106" y1="200" y2="329"></line>
+<line stroke="#3d4a3d" stroke-width="1" x1="200" x2="48" y1="200" y2="150"></line>
+<!-- Polygon A: Rohit K. (All-Rounder: Pace 80, Accuracy 92, Power 94, Stamina 88, Agility 89) -->
+<!-- Computed scaled nodes: Pace(200, 72), Acc(340, 154), Pwr(288, 321), Sta(117, 314), Agi(65, 155) -->
+<polygon fill="rgba(34, 197, 94, 0.22)" filter="url(#glow-primary)" points="200,72 340,154 288,321 117,314 65,155" stroke="#22c55e" stroke-width="2.5"></polygon>
+<circle cx="200" cy="72" fill="#22c55e" r="4.5"></circle>
+<circle cx="340" cy="154" fill="#22c55e" r="4.5"></circle>
+<circle cx="288" cy="321" fill="#22c55e" r="4.5"></circle>
+<circle cx="117" cy="314" fill="#22c55e" r="4.5"></circle>
+<circle cx="65" cy="155" fill="#22c55e" r="4.5"></circle>
+<!-- Polygon B: David M. (Fast Bowler: Pace 96, Accuracy 85, Power 74, Stamina 80, Agility 68) -->
+<!-- Computed scaled nodes: Pace(200, 46), Acc(329, 158), Pwr(270, 296), Sta(125, 303), Agi(97, 166) -->
+<polygon fill="rgba(6, 182, 212, 0.2)" filter="url(#glow-secondary)" points="200,46 329,158 270,296 125,303 97,166" stroke="#4cd7f6" stroke-width="2.5"></polygon>
+<circle cx="200" cy="46" fill="#4cd7f6" r="4.5"></circle>
+<circle cx="329" cy="158" fill="#4cd7f6" r="4.5"></circle>
+<circle cx="270" cy="296" fill="#4cd7f6" r="4.5"></circle>
+<circle cx="125" cy="303" fill="#4cd7f6" r="4.5"></circle>
+<circle cx="97" cy="166" fill="#4cd7f6" r="4.5"></circle>
+</svg>
+<!-- Axis Labels Positioned Exactly Around the Radar -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 flex flex-col items-center">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface">Pace (km/h)</span>
+<span class="font-label-data text-[12px] text-on-surface-variant font-mono">144 vs 152</span>
+</div>
+<div class="absolute top-[32%] right-1 translate-x-1/4 flex flex-col items-start">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface">Accuracy</span>
+<span class="font-label-data text-[12px] text-primary font-mono font-bold">92 vs 85</span>
+</div>
+<div class="absolute bottom-2 right-[18%] flex flex-col items-center">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface">Power Arc</span>
+<span class="font-label-data text-[12px] text-primary font-mono font-bold">94 vs 74</span>
+</div>
+<div class="absolute bottom-2 left-[18%] flex flex-col items-center">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface">Stamina</span>
+<span class="font-label-data text-[12px] text-on-surface-variant font-mono">88 vs 80</span>
+</div>
+<div class="absolute top-[32%] left-1 -translate-x-1/4 flex flex-col items-end">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-on-surface">Agility</span>
+<span class="font-label-data text-[12px] text-primary font-mono font-bold">89 vs 68</span>
+</div>
+</div>
+<!-- Radar Legend Bar -->
+<div class="flex items-center gap-space-lg mt-space-sm pt-space-xs font-label-telemetry text-label-telemetry">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+<span class="text-on-surface">Rohit K. (Index 88.6)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(6,182,212,0.6)]"></span>
+<span class="text-on-surface">David M. (Index 80.6)</span>
+</div>
+</div>
+</div>
+<!-- Direct Statistical Breakdown Table -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-md py-space-xs font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">
+<span>Core Biomechanical Vector</span>
+<div class="flex items-center gap-10">
+<span class="text-primary font-bold">Rohit K.</span>
+<span class="text-secondary font-bold">David M.</span>
+<span>Delta</span>
+</div>
+</div>
+<!-- Metric Row 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors font-label-data text-label-data">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">speed</span>
+<span class="text-on-surface">Delivery Pace &amp; Momentum</span>
+</div>
+<div class="flex items-center gap-10 font-mono">
+<span class="w-12 text-right text-on-surface">80</span>
+<span class="w-12 text-right text-secondary font-bold">96</span>
+<span class="w-12 text-right text-secondary">+16 (B)</span>
+</div>
+</div>
+<!-- Metric Row 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors font-label-data text-label-data">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">track_changes</span>
+<span class="text-on-surface">Release Pitch Accuracy</span>
+</div>
+<div class="flex items-center gap-10 font-mono">
+<span class="w-12 text-right text-primary font-bold">92</span>
+<span class="w-12 text-right text-on-surface">85</span>
+<span class="w-12 text-right text-primary">+7 (A)</span>
+</div>
+</div>
+<!-- Metric Row 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors font-label-data text-label-data">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">bolt</span>
+<span class="text-on-surface">Rotational Power / Bat Swing</span>
+</div>
+<div class="flex items-center gap-10 font-mono">
+<span class="w-12 text-right text-primary font-bold">94</span>
+<span class="w-12 text-right text-on-surface">74</span>
+<span class="w-12 text-right text-primary">+20 (A)</span>
+</div>
+</div>
+<!-- Metric Row 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors font-label-data text-label-data">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">cardio_load</span>
+<span class="text-on-surface">Aerobic Stamina (Yo-Yo V2)</span>
+</div>
+<div class="flex items-center gap-10 font-mono">
+<span class="w-12 text-right text-primary font-bold">88</span>
+<span class="w-12 text-right text-on-surface">80</span>
+<span class="w-12 text-right text-primary">+8 (A)</span>
+</div>
+</div>
+<!-- Metric Row 5 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors font-label-data text-label-data">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">directions_run</span>
+<span class="text-on-surface">Change of Direction Agility</span>
+</div>
+<div class="flex items-center gap-10 font-mono">
+<span class="w-12 text-right text-primary font-bold">89</span>
+<span class="w-12 text-right text-on-surface">68</span>
+<span class="w-12 text-right text-primary">+21 (A)</span>
+</div>
+</div>
+</div>
+<!-- AI Scout Intelligence Report Box -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_toy</span>
+<span class="font-headline-md text-sm text-on-surface">AI Scout Intelligence Diagnosis</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-primary font-semibold">98.8% RECOGNITION CONFIDENCE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            “Strong death-over yorker execution with 2.1° release angle variance. High agility against spin variations. Recommended: Preserve wrist snap alignment when transitioning into over-the-wicket line to avoid late leg-side drift.”
+          </p>
+<div class="flex flex-wrap items-center gap-2 mt-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-telemetry text-label-telemetry">
+              DRILL: Kinetic Wrist Decoupling #4
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-telemetry text-label-telemetry">
+              TARGET: Block-Hole Precision Array
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-telemetry text-label-telemetry">
+              INTERVAL: 6x4 Ball Death Overs
+            </span>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Live Optical & Pose Vector Analytics Viewport (Span 6) -->
+<div class="xl:col-span-6 flex flex-col gap-gutter">
+<!-- Primary Live Tracking Viewport -->
+<section class="bg-surface-container rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary animate-ping"></span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Optical Pose &amp; Trajectory Vector Engine</h2>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">HIGH-SPEED MULTI-POINT KINEMATIC STREAM</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-secondary font-label-telemetry text-label-telemetry shadow-[0_0_16px_rgba(6,182,212,0.2)]">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>OPTICAL TRACKING v4.2 • 60 FPS WebGPU ENCLAVE</span>
+</div>
+</div>
+<!-- Video Pose Frame with Kinetic Overlay -->
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-surface-container-lowest flex items-center justify-center group shadow-2xl">
+<!-- Background Visual Feed (High-speed cricket bowling delivery stride) -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="High speed sports capture of professional cricket bowler in mid delivery stride at pitch crease, captured under stadium floodlights with biomechanical motion analysis grid aesthetic, ultra high clarity dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhwbc5jWQSenBERg30xExKoGd5evdfKHOpYTp8w_Y2IcypIWZWqmRC-vf0mrVfRyKI5nU5IuSNDR1kuu6yn3wk3SvWWJZ6mhz8ZTq6j4EJnd6-SDEsofj5fOy-tAt_uLUs-AGLklwnVvvj_GqerRqinb0So9CNaI7GxFckPsv-Qt8vVSX7ZEG9Dd6DMPVM-reoPChvsq47BQpTgPNqwUxFkYaU3KWQ1w51OUGqStp-"/>
+<!-- Semi-transparent Kinetic Vector Overlay (SVG Joint Tracking & Trajectories) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 800 500">
+<!-- Grid Lines Matrix -->
+<defs>
+<pattern height="40" id="telemetryGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.08)" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#telemetryGrid)" height="100%" width="100%"></rect>
+<!-- Pitch Release Crease Guideline -->
+<line stroke="#3d4a3d" stroke-dasharray="6 4" stroke-width="2" x1="120" x2="680" y1="450" y2="450"></line>
+<text fill="#869585" font-family="JetBrains Mono" font-size="11" letter-spacing="1" x="130" y="440">BOWLER POPPING CREASE (X-PLANE)</text>
+<!-- Skeleton Pose Rig: Head, Shoulders, Spine, Hips, Knees, Ankles, Arms -->
+<!-- Arm Vector Trajectory (Ball Release Arc) -->
+<path class="animate-pulse" d="M 480 110 Q 520 180 580 280 T 710 460" fill="none" stroke="#22c55e" stroke-dasharray="4 4" stroke-width="3"></path>
+<!-- Inswing Seam Deviation Vector -->
+<path d="M 580 280 Q 640 370 760 480" fill="none" stroke="#4cd7f6" stroke-width="2.5"></path>
+<!-- Joint Skeleton Lines -->
+<!-- Spine -->
+<line opacity="0.8" stroke="#4cd7f6" stroke-width="3" x1="420" x2="410" y1="130" y2="250"></line>
+<!-- Bowling Arm (Right) -->
+<line stroke="#22c55e" stroke-width="3.5" x1="420" x2="480" y1="130" y2="110"></line>
+<!-- Non-Bowling Arm (Left Counter-balance) -->
+<line opacity="0.6" stroke="#dae2fd" stroke-width="2.5" x1="420" x2="350" y1="130" y2="180"></line>
+<!-- Pelvis to Front Knee -->
+<line stroke="#4cd7f6" stroke-width="3.5" x1="410" x2="460" y1="250" y2="340"></line>
+<!-- Front Knee to Plant Foot (168° extension) -->
+<line stroke="#22c55e" stroke-width="4" x1="460" x2="475" y1="340" y2="445"></line>
+<!-- Back Leg (Trailing Drag) -->
+<line opacity="0.5" stroke="#dae2fd" stroke-width="2.5" x1="410" x2="340" y1="250" y2="330"></line>
+<line opacity="0.5" stroke="#dae2fd" stroke-width="2.5" x1="340" x2="290" y1="330" y2="410"></line>
+<!-- Joint Nodes & Reticles -->
+<!-- Head / Gaze point -->
+<circle cx="430" cy="95" fill="none" r="9" stroke="#22c55e" stroke-width="2"></circle>
+<circle cx="430" cy="95" fill="#22c55e" r="3"></circle>
+<!-- Bowling Shoulder -->
+<circle cx="420" cy="130" fill="#4cd7f6" r="6"></circle>
+<!-- Ball Release Hand -->
+<circle class="shadow-[0_0_12px_rgba(34,197,94,1)]" cx="480" cy="110" fill="#22c55e" r="8"></circle>
+<!-- Hip Pivot Node -->
+<circle cx="410" cy="250" fill="#4cd7f6" r="7"></circle>
+<!-- Front Plant Knee (Critical Metric Marker) -->
+<circle cx="460" cy="340" fill="none" r="8" stroke="#22c55e" stroke-width="2.5"></circle>
+<circle cx="460" cy="340" fill="#22c55e" r="4"></circle>
+<!-- Front Foot Contact -->
+<circle cx="475" cy="445" fill="#4cd7f6" r="7"></circle>
+<!-- Dynamic On-Frame Graphic Overlays -->
+<!-- Angle Callout: Front Knee -->
+<g transform="translate(480, 320)">
+<rect fill="rgba(11, 19, 38, 0.85)" height="34" rx="6" stroke="#22c55e" stroke-width="1" width="110"></rect>
+<text fill="#dae2fd" font-family="JetBrains Mono" font-size="10" x="10" y="16">FRONT KNEE</text>
+<text fill="#4be277" font-family="Space Grotesk" font-size="12" font-weight="700" x="10" y="28">168.4° (OPTIMAL)</text>
+</g>
+<!-- Trajectory Angle Callout: Ball Exit -->
+<g transform="translate(500, 85)">
+<rect fill="rgba(11, 19, 38, 0.85)" height="36" rx="6" stroke="#4cd7f6" stroke-width="1" width="140"></rect>
+<text fill="#dae2fd" font-family="JetBrains Mono" font-size="10" x="10" y="16">RELEASE POINT</text>
+<text fill="#4cd7f6" font-family="Space Grotesk" font-size="13" font-weight="700" x="10" y="30">2.1° ARC • 144.2 KM/H</text>
+</g>
+</svg>
+<!-- Top Viewport Control Badges -->
+<div class="absolute top-space-md left-space-md flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface/80 backdrop-blur text-on-surface font-label-telemetry text-label-telemetry flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+              REC: CAM_03_SIDE_ISO
+            </span>
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-on-surface-variant font-label-telemetry text-label-telemetry">
+              SHUTTER: 1/2000s
+            </span>
+</div>
+<div class="absolute top-space-md right-space-md flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-lg bg-surface/80 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">slow_motion_video</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface/80 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface/80 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+<!-- Bottom Telemetry HUD Bar on Frame -->
+<div class="absolute bottom-space-sm left-space-sm right-space-sm bg-surface/90 backdrop-blur-md rounded-xl p-space-sm flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">BALL EXIT VELOCITY</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">144.2 <span class="text-sm font-normal text-on-surface">km/h</span></span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">SEAM DEVIATION</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">3.8° <span class="text-sm font-normal text-on-surface">Late Inswing</span></span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">REVOLUTION SPEED</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">2,410 <span class="text-sm font-normal text-on-surface">RPM</span></span>
+</div>
+</div>
+<!-- Instant Scrub Slider Controls -->
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">replay_10</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center transition-all shadow-[0_0_12px_rgba(34,197,94,0.4)]">
+<span class="material-symbols-outlined text-[18px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">forward_10</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Frame Telemetry Breakdown Chips -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">RUN-UP PEAK SPEED</span>
+<span class="font-headline-md text-sm text-on-surface font-semibold">28.4 km/h <span class="text-xs text-primary font-normal">(99th %)</span></span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">STRIDE LENGTH RATIO</span>
+<span class="font-headline-md text-sm text-on-surface font-semibold">2.18m <span class="text-xs text-secondary font-normal">(Optimal)</span></span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">BACK FOOT IMPACT LOAD</span>
+<span class="font-headline-md text-sm text-on-surface font-semibold">7.2x BW <span class="text-xs text-tertiary font-normal">(Load Safe)</span></span>
+</div>
+</div>
+</section>
+<!-- Cross-Sport Biomechanical Schema Engine Adapter -->
+<section class="bg-surface-container rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px]">swap_horizontal_circle</span>
+<div>
+<h3 class="font-headline-md text-sm text-on-surface">Adaptive Cross-Sport Schema Pipeline</h3>
+<p class="font-label-telemetry text-label-telemetry text-on-surface-variant">INSTANT METRIC RE-WEIGHTING WHEN TOGGLING DISCIPLINES</p>
+</div>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">10 DATA ENGINE MODELS PRE-CACHED</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Quick Card A: Football Schema -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all border border-surface-container-highest/40 flex flex-col gap-space-xs cursor-pointer group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">sports_soccer</span>
+<span class="font-headline-md text-sm text-on-surface font-semibold">Football Schema</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Re-configures camera pose arrays to pitch topology: Expected Goals (xG), Progressive Key Passes, and Dribble Success %.
+            </p>
+<div class="flex items-center gap-2 pt-1 font-label-telemetry text-label-telemetry">
+<span class="text-primary">xG: 0.68/90</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-secondary">Key Passes: 3.4</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-tertiary">Dribble: 76%</span>
+</div>
+</div>
+<!-- Quick Card B: Kabaddi Schema -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all border border-surface-container-highest/40 flex flex-col gap-space-xs cursor-pointer group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">sports_kabaddi</span>
+<span class="font-headline-md text-sm text-on-surface font-semibold">Kabaddi Schema</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Adapts optical tracking for close-contact mats: Raid Strike Rate, Super Tackles, Ankle Holds, and Vocal Cant Duration.
+            </p>
+<div class="flex items-center gap-2 pt-1 font-label-telemetry text-label-telemetry">
+<span class="text-primary">Raid Pts: 11.2</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-secondary">Super Tackles: 2.1</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-tertiary">Cant: 98%</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>

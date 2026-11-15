@@ -68,4 +68,3 @@ The shared UI applies the Stitch color tokens and component treatment across eve
 
 ## Real cricket data workflow
 The Cricket workspace can ingest a user-provided Cricsheet JSON match file or JSON ZIP archive, derive match-level player batting/bowling summaries, visualize the results, and export a CSV that includes source and license columns. Cricsheet JSON is made available under the Open Data Commons Attribution License (ODC-BY 1.0); attribution is required. See https://cricsheet.org/licensing/ and https://cricsheet.org/downloads/. Imported files are processed in memory during the Streamlit session; the project does not bundle or redistribute a match archive. The other sports' included roster data remains synthetic demo data.
-
